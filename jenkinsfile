@@ -1,0 +1,30 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('CI') {
+            steps {
+                withCredentials([usernamePassword(credentialsId: 'docker-hub', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+                git 'https://github.com/Divina-paulus/node-app'
+                sh """
+                docker login -u ${USERNAME} -p ${PASSWORD}
+                docker build . -t divinaboules/finalapp --network host
+                docker push divinaboules/finalapp
+                """
+                }
+            }
+        }
+         stage('CD') {
+            steps {
+                withCredentials([usernamePassword(credentialsId: 'docker-hub', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+                git 'https://github.com/Divina-paulus/node-app'
+                sh """
+                docker login -u ${USERNAME} -p ${PASSWORD}
+                kubectl apply -f /var/jenkins_home/workspace/docker-pipeline/deployment.yaml -n node-ns
+                kubectl apply -f /var/jenkins_home/workspace/docker-pipeline/service.yaml -n node-ns
+                """
+                }
+            }
+        }
+    }
+}
