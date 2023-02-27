@@ -69,7 +69,7 @@ kubectl logs
 <img src="https://user-images.githubusercontent.com/92440274/221448555-d01fda51-fa82-4bfc-b625-ceb2610fe62c.png">
 <img src="https://user-images.githubusercontent.com/92440274/221448613-1c95666e-96f4-4eee-a7e9-0c4a619d5964.png">
 <img src="https://user-images.githubusercontent.com/92440274/221444056-a73cc1c8-6ff4-4ff4-9205-4c99a08403ca.png">
-<img src="https://user-images.githubusercontent.com/92440274/221448677-8bf08705-7959-49f7-90c7-d7f6972a46b3.png">
+<img src="https://user-images.githubusercontent.com/92440274/221448819-5b0f0e01-f189-4152-8f06-38925f3b8a88.png">
 
 
 
