@@ -8,7 +8,7 @@
 - EKS cluster
 - Create public load balancer on EKS
 - Create private load balancer on EKS
-- EKS cluster
+
 
 run terraform
 ```
