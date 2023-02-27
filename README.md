@@ -6,8 +6,8 @@
 - 2private and 2public subnets
 - NAT Gateway
 - EKS cluster
-- Create public load balancer on EKS
-- Create private load balancer on EKS
+- 2 load balancer
+
 
 
 run terraform
